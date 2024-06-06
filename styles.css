@@ -1,0 +1,316 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+span,
+a {
+  cursor: pointer;
+}
+
+/* TOP NAV */
+.top-nav {
+  height: 5vh;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid rgb(195, 192, 192);
+}
+
+.top-nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0 10px;
+}
+
+.top-nav-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding: 0 10px;
+  height: 10vh;
+  font-size: 1.4rem;
+}
+
+.header-nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.header-nav-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.side-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ARTICLE */
+article {
+  height: 70vh;
+  background: url("https://images.unsplash.com/photo-1501472393568-6d98729ac121?q=80&w=2320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center center / cover;
+  background-blend-mode: multiply;
+  background-color: rgb(167, 11, 11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 10rem;
+}
+
+.promo-container {
+  height: 55vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid lightgrey;
+}
+
+.promo-msg {
+  height: 80%;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lg-promo-txt {
+  font-size: 60px;
+}
+
+.promo-msg > p {
+  padding: 20px 0;
+}
+
+.promo-msg > button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background: black;
+  color: white;
+}
+
+.lg-hero {
+  height: 62vh;
+  width: 100vw;
+  margin-bottom: 50px;
+}
+
+.lg-hero > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sm-hero {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid lightgrey;
+}
+
+.women-container {
+  height: 100%;
+  width: 100%;
+  padding: 0 0 40px 40px;
+  color: white;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-flow: column;
+  background: url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TmlrZXxlbnwwfHwwfHx8MA%3D%3D")
+    center center / cover;
+}
+
+.men-container {
+  height: 100%;
+  width: 100%;
+  padding: 0 0 40px 40px;
+  color: white;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-flow: column;
+  background: url("https://images.unsplash.com/photo-1556906781-9a412961c28c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center center / cover;
+}
+
+.shop-preview {
+  height: 100vh;
+  margin: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.sm-shop-grid {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 50px;
+  gap: 20px;
+}
+
+.shop-item-1 {
+  height: 100%;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1623039497026-00af61471107?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmVtYWxlJTIwbW9kZWx8ZW58MHx8MHx8fDA%3D")
+    center center / cover;
+}
+
+.shop-item-2 {
+  height: 100%;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1562572159-4efc207f5aff?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center center / cover;
+}
+.shop-item-3 {
+  height: 100%;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center center / cover;
+}
+
+.flex-shop {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+.tri-grid-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background: whitesmoke;
+  border: 0.5px solid lightgrey;
+}
+
+.tri-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.grid {
+  text-align: center;
+}
+
+.grid-1,
+.grid-2,
+.grid-3 {
+  background: url("https://images.pexels.com/photos/6594253/pexels-photo-6594253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    center center / cover;
+  height: 75vh;
+  width: 30%;
+  display: flex;
+
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-1 {
+  background: url("https://images.unsplash.com/photo-1541873676-a18131494184?w=1400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXN0cm9uYXV0fGVufDB8fDB8fHww")
+    center center / cover;
+}
+
+.grid-2 {
+  background: url("https://images.unsplash.com/photo-1717496002081-38a90d3cba26?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center center / cover;
+}
+
+.grid-3 {
+  background: url("https://images.unsplash.com/photo-1716908952387-0b1128538b68?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center center / cover;
+}
+
+.grid > img {
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  border: none;
+  outline: 1px solid lightgrey;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.directory-top {
+  width: 100%;
+  height: 50vh;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: whitesmoke;
+  padding: 0 10rem;
+}
+
+.directory-menu {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+  line-height: 2rem;
+}
+
+.directory-heading {
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
