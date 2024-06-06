@@ -23,11 +23,8 @@ a {
 }
 
 .container {
-  max-width: 90vw;
-  border: 0.5px solid grey;
-  margin: 2rem 0;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  width: 100%;
+  height: 100%;
   padding: 10px;
 }
 
@@ -38,7 +35,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.5px solid rgb(195, 192, 192);
 }
 
 .top-nav-menu {
@@ -99,7 +95,6 @@ article {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  border: 0.5px solid lightgrey;
 }
 
 .promo-msg {
@@ -131,7 +126,6 @@ article {
 .lg-hero {
   height: 62vh;
   width: 100%;
-  margin-bottom: 50px;
 }
 
 .lg-hero > img {
@@ -146,7 +140,6 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.5px solid lightgrey;
 }
 
 .women-container {
@@ -226,8 +219,6 @@ article {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  background: whitesmoke;
-  border: 0.5px solid lightgrey;
 }
 
 .tri-grid {
@@ -278,23 +269,21 @@ article {
   width: 100%;
 }
 
-input {
+/* input {
   border: none;
   outline: 1px solid lightgrey;
   height: 40px;
   width: 150px;
   text-align: center;
   border-radius: 25px;
-}
+} */
 
 .directory-top {
   width: 100%;
   height: 50vh;
-  border-bottom: 1px solid lightgray;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: whitesmoke;
   padding: 0 10rem;
 }
 
@@ -322,4 +311,96 @@ footer {
   display: flex;
   gap: 2rem;
   list-style: none;
+}
+
+@media screen and (max-width: 800px) {
+  .top-nav,
+  header {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .top-nav {
+    border-bottom: 0.5px solid lightgray;
+  }
+  .logo {
+    display: none;
+  }
+  article {
+    height: 50vh;
+    background: black;
+  }
+  article > h1 {
+    font-size: 6rem;
+    color: white;
+  }
+  .promo-container {
+    border: 1px solid lightgray;
+    margin: 2rem 0;
+    height: 80vh;
+  }
+  .lg-hero {
+    height: 40vh;
+  }
+  .sm-hero {
+    height: 40vh;
+  }
+
+  .sm-shop-grid {
+    display: flex;
+    height: 100vh;
+    width: 100w;
+  }
+  .tri-grid-container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  .tri-grid {
+    display: flex;
+    height: 100%;
+  }
+  .grid {
+    height: 70vh;
+    width: 100vw;
+    font-size: 0.8rem;
+  }
+  .directory-top {
+    /* border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+    justify-self: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 20px; */
+    display: none;
+  }
+  .feature-container,
+  .shoes-container,
+  .clothing-container,
+  .kids-container {
+    border: 1px solid black;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  footer {
+    height: 50vh;
+    width: 100%;
+    background: whitesmoke;
+  }
+
+  .footer-menu {
+    font-size: 0.8rem;
+    padding: 3rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+  }
 }
