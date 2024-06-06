@@ -7,16 +7,28 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 span,
 a {
   cursor: pointer;
+}
+
+.container {
+  max-width: 90vw;
+  border: 0.5px solid grey;
+  margin: 2rem 0;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 10px;
 }
 
 /* TOP NAV */
@@ -118,7 +130,7 @@ article {
 
 .lg-hero {
   height: 62vh;
-  width: 100vw;
+  width: 100%;
   margin-bottom: 50px;
 }
 
