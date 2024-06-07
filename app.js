@@ -1,61 +1,45 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const slider = document.querySelector(".slider"); // container
-//   const slides = document.querySelectorAll(".slide");
-//   const prev = document.querySelector(".prev");
-//   const next = document.querySelector(".next");
+const modal = document.querySelector(".modal");
+const close_modal = document.querySelector(".close");
+const submit_email = document.querySelector(".submit");
+const signUpMsg = document.querySelector(".sign-up-msg");
 
-//   let currentIndex = 0;
+let showModalTimeout = setTimeout(function () {
+  modal.classList.add("show");
 
-//   function updateSliderPosition() {
-//     const offset = -currentIndex * 100;
-//     slider.style.transform = `translateX(${offset}%)`;
-//   }
+  // Set another timer to remove the modal after 5 seconds if no user interaction
+  let autoRemoveTimeout = setTimeout(function () {
+    modal.classList.remove("show");
+  }, 5000);
 
-//   prev.addEventListener("click", function () {
-//     if (currentIndex > 0) {
-//       currentIndex--;
-//     } else {
-//       currentIndex = slides.length - 1;
-//     }
-//     updateSliderPosition();
-//   });
+  // Function to handle user interaction
+  function handleUserInteraction() {
+    clearTimeout(autoRemoveTimeout); // Clear the auto-remove timeout
+    document.removeEventListener("click", handleUserInteraction); // Remove the event listener
+  }
 
-//   next.addEventListener("click", function () {
-//     if (currentIndex < slides.length - 1) {
-//       currentIndex++;
-//     } else {
-//       currentIndex = 0;
-//     }
-//     updateSliderPosition();
-//   });
+  // Add an event listener for user interaction
+  document.addEventListener("click", handleUserInteraction);
+}, 2000);
 
-//   updateSliderPosition();
-// });
+let handleSubmit = function () {
+  submit_email.addEventListener("click", function (e) {
+    e.preventDefault();
+    signUpMsg.innerHTML = "signed up!";
+  });
+};
 
-// slider.js
+// When the user clicks on <span> (x), close the modal
+close_modal.onclick = function () {
+  modal.classList.remove("show");
+};
 
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const prevButton = document.querySelector('.control.prev');
-    const nextButton = document.querySelector('.control.next');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.classList.remove("show");
+  }
+};
 
-    let currentIndex = 0;
+// function calls
 
-    const updateSliderPosition = () => {
-        const offset = -currentIndex * 100;
-        slider.style.transform = `translateX(${offset}%)`;
-    };
-
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-        updateSliderPosition();
-    });
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-        updateSliderPosition();
-    });
-
-    updateSliderPosition();
-});
+handleSubmit();
